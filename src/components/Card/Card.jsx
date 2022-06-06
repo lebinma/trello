@@ -31,7 +31,7 @@ export default function Card(props) {
 
   const updateTask = (index, title) => {
     const newTasks = [...details.tasks];
-    newTasks[index] = title;
+    newTasks[index] = { ...newTasks[index], title };
     props.onDetailsChange({ ...details, tasks: newTasks });
   };
 
